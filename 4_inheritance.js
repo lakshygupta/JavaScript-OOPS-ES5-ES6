@@ -11,9 +11,14 @@ Book.prototype.getSummary = function(){
 }
 
 //Magazine Constructor that inherits the Book
-function Magazine(title,author,year,month){
-    Book.call(this,title,author,year);
-    this.month = month; //specify the month seprately
+// function Magazine(title,author,year,month){
+//     Book.call(this,title,author,year);
+//     this.month = month; //specify the month seprately
+// }
+//above can also be done with :-
+function Magazine(...args){
+    Book.apply(this,args);
+    this.month = args[3];
 }
 
 //Prototype of Book is not inherited by default so to inherit it :

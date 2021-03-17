@@ -1,6 +1,6 @@
 const s1 = 'hello';
 console.log(typeof s1); //-> string
-
+//JS wraps the primitive type string in object and all the object methods can be called for the primitive type string
 const s2 = new String('hello');
 console.log(typeof s2); //-> object
 
