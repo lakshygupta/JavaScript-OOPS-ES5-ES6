@@ -26,6 +26,7 @@ async function serveOrder() {
         const orderRecvd = await placeOrder("coffee"); // no need to return or chain
         console.log(orderRecvd);
         const processedOrder = await processOrder(orderRecvd);
+        console.log("after");
         console.log(processedOrder);
     } catch (error) {
         console.log(error);
